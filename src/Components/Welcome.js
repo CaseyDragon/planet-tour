@@ -1,13 +1,16 @@
 import React from 'react';
 
-function Welcome() {
+function Welcome({newName}) {
     return(
         <div>
             <h1>Welcome to</h1>
             <h1>the Universe</h1>
             {/* i want this to change to the planet name */}
-            <h1>Astronaut!</h1>
-            {/* i want this to change to the name entered */}
+            <h1>{newName}!</h1>
+            {/* {useState of name ? setname : "astronaut"} 
+            i want this to change to the name entered */}
+
+
         </div>
     )
 }
