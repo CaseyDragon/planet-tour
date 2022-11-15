@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 function Welcome({newName}) {
     return(
         <div>

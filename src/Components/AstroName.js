@@ -1,22 +1,18 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 const AstroName = ({newName, setNewName}) => {
-    const addName= (e) => {
-        e.preventDefault();
-      
-
-        // find a way to hide the input
-       
-      
-      } 
+ 
     
     return(
-   <div>
-        <form className="nameYourAstro">
-            <label>What's your Name?</label>
-            <input type="text" name='name' value={newName} onChange={(e) => setNewName(e.target.value)}></input>
-            <button type='submit' onClick={addName}>Let's Go!</button>
-        </form>
-    </div>
-   )
+        <div>
+                <h3>What's your Name?</h3>
+                <input type="text" name='name' value={newName} onChange={(e) => setNewName(e.target.value)}></input>
+                <Link to= 'solarsystemview'>
+                     <button>Lets Go!</button>
+                </Link>
+        </div>
+    )
 }
 export default AstroName;
