@@ -1,6 +1,15 @@
 
-const AstroName = ({newName, setNewName, addName }) => {
-      return(
+const AstroName = ({newName, setNewName}) => {
+    const addName= (e) => {
+        e.preventDefault();
+      
+
+        // find a way to hide the input
+       
+      
+      } 
+    
+    return(
    <div>
         <form className="nameYourAstro">
             <label>What's your Name?</label>
