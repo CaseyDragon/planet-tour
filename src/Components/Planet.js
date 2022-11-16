@@ -1,12 +1,28 @@
 import React from 'react';
+import {useParams} from 'react-router-dom';
 
-function Planet({planet}) {
+
+function Planet({planets}) {
+    
+    const {planet} = useParams()
+    let showPlanet = planets.filter(celBody => celBody.name===planet)
+console.log(planet, showPlanet)
+const spaceRock = showPlanet.map((rock)=> {
+    console.log(rock.imgSrc[0].img)
     return(
+        <>
+        <div className='name'>{rock.name}</div>
+            <div className= 'picture'><img src={rock.imgSrc[0].img} alt='planet'/></div>
+            <div className ='facts'> {rock.description}</div>
+            <div className = "number">{rock.planetOrder}</div>
+        </>
+    )
+})
+    return(
+
         <div className = 'planetFacts'>
-            <div className='name'>{planet.name}</div>
-            <div className= 'picture'>{planet.imgSrc}</div>
-            <div className ='facts'> {planet.description}</div>
-            <div className = "number">{planet.planetOrder}</div>
+            <p>welcome to this planet!</p>
+           {spaceRock}
             <button>lets pretend im a rocket ship that goes back to the solare system</button>
         </div>
     )
