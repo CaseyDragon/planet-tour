@@ -1,14 +1,11 @@
 import axios from 'axios';
-import React, {Fragment, useEffect, useState} from 'react';
+import React, {Fragment, useState} from 'react';
 import {Link} from 'react-router-dom'
-import Planet from './Planet.js'
+// import Planet from './Planet.js'
 
 
 function SolarSystemView() {
-    // useEffect(()=>{
-    //     getPlanets();
-    // },[])
-    
+  
     const [planets, setPlanets]= useState([])
     const [loading, setLoading]= useState(false)
     
@@ -38,10 +35,10 @@ axios.request(getPlanets).then(function (response) {
             planets.map((planet)=> {
                 return(
                 <div key ={planet.name} className = "planet" id= 'planet.id'>
-                      <Link to ={'/solarsystemview/' + planet.name}>hey</Link>
+                      <Link to ={'/solarsystemview/' + planet.name}>{planet.name}</Link>
                 </div>
                 )
-               <Planet planet={planet}/>
+            //    <Planet planet={planet}/>
                 // console.log(planet.name)
             }
                 

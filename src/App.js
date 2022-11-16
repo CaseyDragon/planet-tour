@@ -31,7 +31,7 @@ return(
           newName={newName}
           setNewName ={setNewName}
           />
-      <SolarSystemView/>
+      <SolarSystemView />
   
   </div>
 </BrowserRouter>
