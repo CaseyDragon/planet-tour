@@ -1,5 +1,6 @@
 import React from 'react';
 import {useParams, useNavigate} from 'react-router-dom';
+import GoBack from './GoBack.js';
 
 
 function Planet({planets, setSolarSystem}) {
@@ -25,7 +26,7 @@ const spaceRock = showPlanet.map((rock)=> {
 
         <div className = 'planetFacts'>
            {spaceRock}
-            <button onClick={(e)=> navigate(-1)}>Rocket Ship</button>
+            <p onClick={(e)=> navigate(-1)}><GoBack /></p>
         </div>
     )
 }

@@ -1,7 +1,8 @@
 
 import React, {Fragment} from 'react';
-import {Link} from 'react-router-dom'
-// import Planet from './Planet.js'
+import {Link} from 'react-router-dom';
+import GoBack from './GoBack.js';
+
 
 
 function SolarSystemView({planets, loading, setSolarSystem, setUnnamed}) {
@@ -22,7 +23,7 @@ function SolarSystemView({planets, loading, setSolarSystem, setUnnamed}) {
                 )}
                 )}
             </div>
-            <div className='goHome'><Link to = '/'><button onClick={()=> setUnnamed(true)}>Rocket Ship</button></Link></div>
+            <div className='goHome'><Link to = '/'><p onClick={()=> setUnnamed(true)}><GoBack /></p></Link></div>
         </Fragment>
     )
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import RocketButton from './RocketButton.js';
 
 
 const AstroName = ({newName, setNewName, setUnnamed}) => {
@@ -10,10 +11,12 @@ const AstroName = ({newName, setNewName, setUnnamed}) => {
            
                 <h3>What's your Name?</h3>
                 <input type="text" name='name' value={newName} onChange={(e) => setNewName(e.target.value)}></input>
+                
                 <Link to='solarsystemview'>
-                     <button onClick={()=> setUnnamed(false)}>Lets Go!</button>
+                     <p onClick={()=> setUnnamed(false)}><RocketButton /></p>
                 </Link>
-        </div>
+        </div> 
+      
     )
 }
 export default AstroName;
