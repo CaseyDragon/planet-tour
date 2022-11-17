@@ -11,7 +11,7 @@ import Planet from './Components/Planet.js'
 
 
 function App() {
- 
+const [solarSystem, setSolarSystem] = useState("the Universe") 
 const [newName, setNewName]= useState("Astronaut");
 const [loading, setLoading]= useState(false)
 const [planets, setPlanets]= useState([])
@@ -39,11 +39,12 @@ return(
  <div className="App">
     <Welcome
           newName={newName}
+          solarSystem={solarSystem}
       />
   <Routes>
        <Route path = "solarsystemview" element={<SolarSystemView planets={planets} loading={loading}/>} />
        <Route path = "/"  />
-       <Route path = "/solarsystemview/:planet" element={<Planet planets={planets} />} />
+       <Route path = "/solarsystemview/:planet" element={<Planet planets={planets} solarSystem={solarSystem} setSolarSystem={setSolarSystem}/>} />
    </Routes>
   
  

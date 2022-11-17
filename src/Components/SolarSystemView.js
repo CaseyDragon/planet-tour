@@ -9,7 +9,9 @@ function SolarSystemView({planets, loading}) {
    
    return (
         <Fragment>
+            <h1>Where to?</h1>
              <div className="orbit">
+
                 {loading && 
                 planets.map((planet)=> {
                     return(
@@ -17,16 +19,12 @@ function SolarSystemView({planets, loading}) {
                         <Link to ={'/solarsystemview/' + planet.name}>{planet.name}</Link>
                         </div>
                         )
-            //    <Planet planet={planet}/>
+         
            
                 }
                 
                 )}
             </div>
-            <h1>Where should we go?</h1>
-            {/* i want to use the api ids as the ids for divs for the planets 
-            and use that to name the planets and go to the planet pages
-            i think i need to map the results to do this*/}
         </Fragment>
     )
 }

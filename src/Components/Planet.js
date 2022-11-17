@@ -1,9 +1,9 @@
 import React from 'react';
-import {useParams} from 'react-router-dom';
+import {useParams, useNavigate} from 'react-router-dom';
 
 
 function Planet({planets}) {
-    
+    const navigate = useNavigate();
     const {planet} = useParams()
     let showPlanet = planets.filter(celBody => celBody.name===planet)
 console.log(planet, showPlanet)
@@ -18,12 +18,14 @@ const spaceRock = showPlanet.map((rock)=> {
         </>
     )
 })
-    return(
+    
+
+
+        return(
 
         <div className = 'planetFacts'>
-            <p>welcome to this planet!</p>
            {spaceRock}
-            <button>lets pretend im a rocket ship that goes back to the solare system</button>
+            <button onClick={(e)=> navigate(-1)}>Rocket Ship</button>
         </div>
     )
 }

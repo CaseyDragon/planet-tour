@@ -1,12 +1,12 @@
 import React from 'react';
 
 
-function Welcome({newName}) {
+function Welcome({newName, solarSystem}) {
     return(
         <div>
             <h1>Welcome to</h1>
-            <h1>the Universe</h1>
-            {/* i want this to change to the planet name */}
+            <h1>{solarSystem}</h1>
+       
             <h1>{newName}!</h1>
 
 
