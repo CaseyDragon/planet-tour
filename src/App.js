@@ -42,9 +42,9 @@ return(
           solarSystem={solarSystem}
       />
   <Routes>
-       <Route path = "solarsystemview" element={<SolarSystemView planets={planets} loading={loading} setSolarSystem={setSolarSystem}/>} />
+       <Route path = "solarsystemview" element={<SolarSystemView planets={planets} loading={loading} setSolarSystem={setSolarSystem} setUnnamed={setUnnamed}/>} />
        <Route path = "/"  />
-       <Route path = "/solarsystemview/:planet" element={<Planet planets={planets} setSolarSystem={setSolarSystem}/>} />
+       <Route path = "/solarsystemview/:planet" element={<Planet planets={planets} setSolarSystem={setSolarSystem} />} />
    </Routes>
   
  
