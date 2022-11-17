@@ -5,13 +5,6 @@
 
 }
 
-.planet {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  border: 2px solid black;
-  background-color: green;
-}
 .picture {
   height:50px;
   width:50px;
@@ -19,4 +12,85 @@
 .orbit {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
+
+.theSun {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: linear-gradient(45deg, goldenrod, yellow);
+
+}
+.Mercury {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: grey;
+
+}
+.Venus {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: red;
+
+}
+.Earth {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: cornflowerblue;
+
+}
+.Mars {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: crimson;
+
+}
+.Jupiter {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-color: darksalmon;
+
+}
+
+.Saturn {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: peru;
+
+}
+.Saturn::after {
+  content:'';
+  position: absolute;
+  top: 50%;
+  left:50%;
+  width: 140%;
+  height: 10px;
+  border: 2px solid beige;
+  border-top: 0;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(30deg);
+  
+}
+
+.Uranus {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: skyblue;
+
+}
+.Neptune {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: blue;
+
+}
+

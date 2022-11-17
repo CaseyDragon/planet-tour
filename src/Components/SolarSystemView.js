@@ -11,12 +11,12 @@ function SolarSystemView({planets, loading, setSolarSystem, setUnnamed}) {
         <Fragment>
             <h1>Where to?</h1>
              <div className="orbit">
-
+                <div className="theSun"></div>
                 {loading && 
                 planets.map((planet)=> {
                     setSolarSystem("the Universe")
                     return(
-                        <div key ={planet.name} className = "planet" id= {planet.id}>
+                        <div key ={planet.name} className={planet.name} id= {planet.id}>
                         <Link to ={'/solarsystemview/' + planet.name}>{planet.name}</Link>
                         </div>
                 )}
