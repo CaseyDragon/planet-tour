@@ -15,6 +15,7 @@ const [solarSystem, setSolarSystem] = useState("the Universe")
 const [newName, setNewName]= useState("Astronaut");
 const [loading, setLoading]= useState(false)
 const [planets, setPlanets]= useState([])
+const [unnamed, setUnnamed] = useState(true)
 
 const getPlanets = {
   method: 'GET',
@@ -26,7 +27,6 @@ const getPlanets = {
 };
 
 axios.request(getPlanets).then(function (response) {
-        // console.log(response.data);
         setPlanets(response.data);
         setLoading(true);
 
@@ -42,19 +42,20 @@ return(
           solarSystem={solarSystem}
       />
   <Routes>
-       <Route path = "solarsystemview" element={<SolarSystemView planets={planets} loading={loading}/>} />
+       <Route path = "solarsystemview" element={<SolarSystemView planets={planets} loading={loading} setSolarSystem={setSolarSystem}/>} />
        <Route path = "/"  />
-       <Route path = "/solarsystemview/:planet" element={<Planet planets={planets} solarSystem={solarSystem} setSolarSystem={setSolarSystem}/>} />
+       <Route path = "/solarsystemview/:planet" element={<Planet planets={planets} setSolarSystem={setSolarSystem}/>} />
    </Routes>
   
  
 
-
+    {unnamed && 
       <AstroName 
           newName={newName}
           setNewName ={setNewName}
+          setUnnamed = {setUnnamed}
           />
-      <SolarSystemView />
+    }
   
   </div>
 </BrowserRouter>

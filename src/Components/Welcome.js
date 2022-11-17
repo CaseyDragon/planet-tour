@@ -6,10 +6,7 @@ function Welcome({newName, solarSystem}) {
         <div>
             <h1>Welcome to</h1>
             <h1>{solarSystem}</h1>
-       
             <h1>{newName}!</h1>
-
-
         </div>
     )
 }

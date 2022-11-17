@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 // import Planet from './Planet.js'
 
 
-function SolarSystemView({planets, loading}) {
+function SolarSystemView({planets, loading, setSolarSystem}) {
   
    
    return (
@@ -14,8 +14,9 @@ function SolarSystemView({planets, loading}) {
 
                 {loading && 
                 planets.map((planet)=> {
+                    setSolarSystem("the Universe")
                     return(
-                        <div key ={planet.name} className = "planet" id= 'planet.id'>
+                        <div key ={planet.name} className = "planet" id= {planet.id}>
                         <Link to ={'/solarsystemview/' + planet.name}>{planet.name}</Link>
                         </div>
                         )
