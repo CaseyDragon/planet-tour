@@ -2,13 +2,13 @@ import React from 'react';
 import {useParams, useNavigate} from 'react-router-dom';
 
 
-function Planet({planets}) {
+function Planet({planets, solarSystem, setSolarSystem}) {
     const navigate = useNavigate();
     const {planet} = useParams()
     let showPlanet = planets.filter(celBody => celBody.name===planet)
-console.log(planet, showPlanet)
+
 const spaceRock = showPlanet.map((rock)=> {
-    console.log(rock.imgSrc[0].img)
+   setSolarSystem(rock.name)
     return(
         <>
         <div className='name'>{rock.name}</div>
