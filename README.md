@@ -13,12 +13,10 @@ For this project, I built a simple tour of our Solar System. After being welcome
 
 ## Wireframes & React Component Hierarchy
 
-Upload images of wireframes and component hierarchy to cloudinary (or similar) and add the link here with a description of the specific wireframe.
+- [wireframes](https://whimsical.com/planet-app-75VzrGGsRrQWmJ61dL1J8w)
+- [react architecture](https://whimsical.com/hierarchy-T2i5bCywzh1qbWmcByzuWU)
 
-- [wireframes]()
-- [react architecture]()
 
-Define the the React components and the architectural design of your app.
 
 ### MVP/PostMVP
 
@@ -55,9 +53,18 @@ MVP of this project is a simple flow from the user entering and navigating to ea
  
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Initial set up | H | 0.5hrs| 0.5hrs | 0.5hrs |
+| Building App page | H | 1hrs| 2hrs | 2hrs |
+| Building Welcome | H |  .5 hrs | .25hrs | .25hrs |
+| AstroName | L | .5hrs | 1hr | 1hr |
+| SolarSystem-build | H | 0.5hr | 0.25hr| 0.25hr |
+| SolarSystem- add API | H | 1hr | 0.25 | 0.25 |
+| Planet- build | H | 1 hr | 0.25hr | 0.25hr |
+| Planet- add API | H | 1 hr | 8 hrs | 8hrs |
+| Planets- styled & orderes| L | 2 hrs | 1 hr | 1hr |
+| Navigation | H | 2 hrs | 2 hrs | 2 hrs|
+| Other styling | L | ? | 3 hrs | 3 hrs|
+| Total |  | 10 hrs| 18.5hrs| 24hrs? |
 
 ## Additional Libraries
 
@@ -70,12 +77,17 @@ MVP of this project is a simple flow from the user entering and navigating to ea
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  Code snippet should not be greater than 10 lines of code. 
-
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
+//this section is the individual planets and was a major stumbling block for me, Im very happy with this piece working
+<div className="planetFacts">
+                <div className="topRow">
+                    <div className='picture'><img src={rock.imgSrc[0].img} alt='planet' /></div>
+                    <div className="planetNumber"><p className='number'>{rock.planetOrder}</p><p>Planet Position</p></div>
+                </div>
+                <div className='bottomRow' >
+                    <div className='facts'> {rock.description}</div>
+
+
 ```
 
 ## Issues and Resolutions
