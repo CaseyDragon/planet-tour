@@ -15,7 +15,7 @@ const spaceRock = showPlanet.map((rock)=> {
 
         <div className="topRow">
             <div className= 'picture'><img src={rock.imgSrc[0].img} alt='planet'/></div>
-            <div className = "planetNumber"><p>planet #</p><span className='number'>{rock.planetOrder}</span></div>
+            <div className = "planetNumber"><p className='number'>{rock.planetOrder}</p><p>Planet Position</p></div>
         </div>
         <div className='bottomRow' > 
             <div className ='facts'> {rock.description}</div> 

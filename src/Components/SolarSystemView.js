@@ -10,7 +10,7 @@ function SolarSystemView({ planets, loading, setSolarSystem, setUnnamed }) {
 
     return (
         <Fragment>
-            <p className="pick">Where to?</p>
+            <p className="pick">Where should we go?</p>
             <div className="orbit">
                 <div className="theSun" />
                 {loading &&
