@@ -1,21 +1,24 @@
 .App {
-  text-align:center;
+  text-align: center;
 
 }
+
 .welcome {
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
 .nameBar {
-  margin:30px;
+  margin: 30px;
   font-size: 60px;
 }
+
 .nameSpot {
   font-size: 30px;
   text-align: center;
   margin-bottom: 30px;
 }
+
 .pointer {
   cursor: pointer;
 }
@@ -25,58 +28,64 @@
 }
 
 .planetFacts {
-   margin: 40px;
-  
-  
+  margin: 40px;
+
+
 }
+
 .topRow {
- margin-bottom: 30px;
-  display:flex;
+  margin-bottom: 30px;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
- 
+
 }
 
 img {
-  height:200px;
+  height: 200px;
   width: 200px;
- 
+
   border: 3px solid white;
 
- margin: 0 30px 30px 30px;
+  margin: 0 30px 30px 30px;
 }
+
 .planetNumber {
- margin: 30px 0 50px 20px;
+  margin: 30px 0 50px 20px;
   width: 150px;
   height: 150px;
-  border-radius:50%;
+  border-radius: 50%;
   border: 3px solid white;
   background-color: grey;
   padding: 5px;
   text-align: center;
- 
-  
+
+
 }
 
 .number {
   font-size: 70px;
   margin-bottom: 0px;
- 
+
 }
+
 .bottomRow {
-  display:flex;
+  display: flex;
   justify-content: center;
 }
+
 .facts {
- font-size: 20px;
+  font-size: 20px;
   width: 600px;
   border: 4px solid white;
   background-color: grey;
-  
-  }
+
+}
+
 .pick {
   font-size: 70px;
 }
+
 .orbit {
   margin: 50px 50px 50px 50px;
   display: flex;
@@ -86,20 +95,19 @@ img {
 }
 
 Link {
-  text-decoration:none;
-  cursor:pointer; 
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .hideName {
-  
-  opacity:0;
-  
+   opacity: 0;
 }
+
 .hideName:hover {
   opacity: 1;
-  color:white;
-
+  color: white;
 }
+
 .theSun {
   order: 1;
   height: 100px;
@@ -137,7 +145,7 @@ Link {
 }
 
 .Mars {
-  order:5;
+  order: 5;
   height: 30px;
   width: 30px;
   border-radius: 50%;
@@ -162,21 +170,21 @@ Link {
   background-color: peru;
 
 }
+
 .Saturn::after {
-  content:'';
+  content: '';
   position: absolute;
- 
   width: 60px;
   height: 10px;
   border: 2px solid beige;
   border-top: 0;
   border-radius: 50%;
   transform: translate(-50%, -50%) rotate(30deg);
-  
+
 }
 
 .Uranus {
-  order:8;
+  order: 8;
   height: 50px;
   width: 50px;
   border-radius: 50%;
@@ -186,7 +194,7 @@ Link {
 
 
 .Neptune {
-  order:9;
+  order: 9;
   height: 30px;
   width: 30px;
   border-radius: 50%;
