@@ -11,12 +11,16 @@ function Planet({planets, setSolarSystem}) {
 const spaceRock = showPlanet.map((rock)=> {
    setSolarSystem(rock.name)
     return(
-        <>
-      
+        <div className="planetFacts">
+
+        <div className="topRow">
             <div className= 'picture'><img src={rock.imgSrc[0].img} alt='planet'/></div>
-            <div className ='facts'> {rock.description}</div>
-            <div className = "number">{rock.planetOrder}</div>
-        </>
+            <div className = "planetNumber"><p>planet #</p><span className='number'>{rock.planetOrder}</span></div>
+        </div>
+        <div className='bottomRow' > 
+            <div className ='facts'> {rock.description}</div> 
+        </div>
+        </div>
     )
 })
     
@@ -24,7 +28,7 @@ const spaceRock = showPlanet.map((rock)=> {
 
         return(
 
-        <div className = 'planetFacts'>
+        <div className = 'planetPage'>
            {spaceRock}
             <p onClick={(e)=> navigate(-1)}><GoBack /></p>
         </div>

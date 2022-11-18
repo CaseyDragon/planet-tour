@@ -1,5 +1,6 @@
 import React from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import "bootswatch/dist/superhero/bootstrap.min.css";
 import { useState} from 'react';
 import axios from 'axios';
 import './App.css';
@@ -21,6 +22,7 @@ const getPlanets = {
   method: 'GET',
   url: 'https://planets-info-by-newbapi.p.rapidapi.com/api/v1/planet/list',
   headers: {
+    // 'X-RapidAPI-Key': process.env.REACT_APP_API_KEY,
     'X-RapidAPI-Key':'2d1bb0d53fmsh47470deb9c91173p143b5bjsn9620ab6bef18',
     'X-RapidAPI-Host': 'planets-info-by-newbapi.p.rapidapi.com',
   }
@@ -37,10 +39,12 @@ axios.request(getPlanets).then(function (response) {
 return(
   <BrowserRouter>
  <div className="App">
+    <div className="welcome">
     <Welcome
           newName={newName}
           solarSystem={solarSystem}
       />
+      </div>
   <Routes>
        <Route path = "solarsystemview" element={<SolarSystemView planets={planets} loading={loading} setSolarSystem={setSolarSystem} setUnnamed={setUnnamed}/>} />
        <Route path = "/"  />
