@@ -18,6 +18,11 @@
 .pointer {
   cursor: pointer;
 }
+
+.welcomeMessage {
+  font-size: 60px;
+}
+
 .planetFacts {
    margin: 40px;
   
@@ -64,15 +69,32 @@ img {
   background-color: grey;
   
   }
-
+.pick {
+  font-size: 70px;
+}
 .orbit {
-  margin: 30px 20px 30px 20px;
+  margin: 50px 50px 50px 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
 
+Link {
+  text-decoration:none;
+  cursor:pointer; 
+}
+
+.hideName {
+  
+  opacity:0;
+  
+}
+.hideName:hover {
+  opacity: 1;
+  color:white;
+
+}
 .theSun {
   order: 1;
   height: 100px;
@@ -81,6 +103,7 @@ img {
   background-color: yellow;
 
 }
+
 .Mercury {
   order: 2;
   height: 20px;
@@ -89,6 +112,7 @@ img {
   background-color: grey;
 
 }
+
 .Venus {
   order: 3;
   height: 25px;
@@ -97,6 +121,7 @@ img {
   background-color: red;
 
 }
+
 .Earth {
   order: 4;
   height: 40px;
@@ -105,6 +130,7 @@ img {
   background-color: cornflowerblue;
 
 }
+
 .Mars {
   order:5;
   height: 30px;
@@ -113,6 +139,7 @@ img {
   background-color: crimson;
 
 }
+
 .Jupiter {
   order: 6;
   height: 70px;
@@ -151,6 +178,8 @@ img {
   background-color: skyblue;
 
 }
+
+
 .Neptune {
   order:9;
   height: 30px;

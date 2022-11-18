@@ -1,29 +1,31 @@
 
-import React, {Fragment} from 'react';
-import {Link} from 'react-router-dom';
+import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import GoBack from './GoBack.js';
 
 
 
-function SolarSystemView({planets, loading, setSolarSystem, setUnnamed}) {
-  
-   
-   return (
+function SolarSystemView({ planets, loading, setSolarSystem, setUnnamed }) {
+
+
+    return (
         <Fragment>
-            <h1>Where to?</h1>
-             <div className="orbit">
-                <div className="theSun"></div>
-                {loading && 
-                planets.map((planet)=> {
-                    setSolarSystem("the Universe")
-                    return(
-                        <div key ={planet.name} className={planet.name} id= {planet.id}>
-                        <Link to ={'/solarsystemview/' + planet.name}>{planet.name}</Link>
-                        </div>
-                )}
-                )}
+            <p className="pick">Where to?</p>
+            <div className="orbit">
+                <div className="theSun" />
+                {loading &&
+                    planets.map((planet) => {
+                        setSolarSystem("the Universe")
+                        return (
+                            <div key={planet.name} className={planet.name} id={planet.id}>
+                            <p className="hideName"><Link to={'/solarsystemview/' + planet.name}>{planet.name}</Link></p>
+                                
+                            </div>
+                        )
+                    }
+                    )}
             </div>
-            <div className='goHome'><Link to = '/'><p onClick={()=> setUnnamed(true)}><GoBack /></p></Link></div>
+            <div className='goHome'><Link to='/'><p onClick={() => setUnnamed(true)}><GoBack /></p></Link></div>
         </Fragment>
     )
 }
